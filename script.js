@@ -1,7 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
-// var password = document.getElementById("password");
-var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""); 
+var password = document.getElementById("password");
+var upperCase = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
 var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
 var numbers = "0123456789".split("");
 var symbols = "!@#$%^&*()_+-={}[]:;".split("");
@@ -15,18 +15,22 @@ function generatePassword() {
     var isLowerCase = window.confirm("Do you want to include lowercase characters?");
     var isNumbers = window.confirm("Do you want to include numbers?");
     var isSymbols = window.confirm("Do you want to include special characters?");
+  }
 
   if (isUpperCase === true) {
     var randomIndex = Math.floor(Math.random() * upperCase.length);
     savedPassword = savedPassword + upperCase[randomIndex];
+  }
 
   if (isLowerCase === true) {
     var randomIndex = Math.floor(Math.random() * lowerCase.length);
     savedPassword = savedPassword + lowerCase[randomIndex];
+  }
 
   if (isNumbers === true) {
     var randomIndex = Math.floor(Math.random() * numbers.length);
     savedPassword = savedPassword + numbers[randomIndex];
+  }
 
   if (isSymbols === true) {
     var randomIndex = Math.floor(Math.random() * symbols.length);
@@ -35,15 +39,14 @@ function generatePassword() {
 
   if (isUpperCase === false && isLowerCase === false && isNumbers === false && isSymbols === false) {
     window.alert("You must choose at least one character type")
-    return ""; 
+    return "";
   }
 
-} else {
-  window.alert("You are outside the password range")
+else { window.alert("You are outside the password range")
 }
 
 return savedPassword;
-
+}
 
 // Write password to the #password input
 function writePassword() {
