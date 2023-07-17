@@ -6,10 +6,16 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
 var numbers = "0123456789".split("");
 var symbols = "!@#$%^&*()_+-={}[]:;".split("");
 
+var savePassword = [];
+
+// This function is used to generate the random password
 function generatePassword() {
+
+// Prompt used for user to select password length
   var savedPassword = "";
   var passwordSize = window.prompt("Choose a password length between 8 and 128 characters");
 
+//Prompt for user to confirm the various password criteria 
   if (passwordSize >= 8 && passwordSize <= 128) {
     var isUpperCase = window.confirm("Do you want to include uppercase characters?");
     var isLowerCase = window.confirm("Do you want to include lowercase characters?");

@@ -21,7 +21,7 @@ The page will welcome you with the following image:
 
 ## Credits
 
-An essential component of successfully completing this assignment, was the ability to build and work with a team. I would like to attribute the success of meeting this project's acceptance criteria to the contributions of my following classmates once again to: Lourdes Dorvilus, Rujaine Mena, Jovanni Bogardus, and Lissette Garcia.
+An essential component of successfully completing this assignment, was the ability to build and work with a team. I would like to attribute the success of meeting this project's acceptance criteria to the contributions of my following classmates once again to: Lourdes Dorvilus and Rujaine Mena.
  
 To supplement the design of the Portfolio, the following sites were utilized:
 -W3 Schools for JavaScript notes.
