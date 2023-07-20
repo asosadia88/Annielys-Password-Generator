@@ -16,7 +16,7 @@ This site may now be accessed with all its updated features by visiting the hype
 
 <!-- INSERT DEPLOYED LINK HERE -->
 
-The page will welcome you with the following image:
+The page will generate a unique password 8-128 characters in length for every user based on selected criteria as shown below:
 <!-- <img src="./images/README%20Screenshot.png" alt="README screenshot"> -->
 
 ## Credits

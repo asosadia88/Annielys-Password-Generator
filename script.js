@@ -6,7 +6,6 @@ var lowerCase = "abcdefghijklmnopqrstuvwxyz".split("");
 var numbers = "0123456789".split("");
 var symbols = "!@#$%^&*()_+-={}[]:;".split("");
 
-var savePassword = [];
 
 // This function is used to generate the random password
 function generatePassword() {
@@ -14,33 +13,34 @@ function generatePassword() {
 // Prompt used for user to select password length
   var savedPassword = "";
   var passwordSize = window.prompt("Choose a password length between 8 and 128 characters");
+ 
+  
+var passwordOptions = [];
+
 
 //Prompt for user to confirm the various password criteria 
   if (passwordSize >= 8 && passwordSize <= 128) {
     var isUpperCase = window.confirm("Do you want to include uppercase characters?");
     var isLowerCase = window.confirm("Do you want to include lowercase characters?");
     var isNumbers = window.confirm("Do you want to include numbers?");
-    var isSymbols = window.confirm("Do you want to include special characters?");
+    var isSymbols = window.confirm("Do you want to include symbols?");
   }
 
+  // if statement that add all options to password
   if (isUpperCase === true) {
-    var randomIndex = Math.floor(Math.random() * upperCase.length);
-    savedPassword = savedPassword + upperCase[randomIndex];
+    passwordOptions.push(...upperCase);
   }
 
   if (isLowerCase === true) {
-    var randomIndex = Math.floor(Math.random() * lowerCase.length);
-    savedPassword = savedPassword + lowerCase[randomIndex];
+    passwordOptions.push(...lowerCase);
   }
 
   if (isNumbers === true) {
-    var randomIndex = Math.floor(Math.random() * numbers.length);
-    savedPassword = savedPassword + numbers[randomIndex];
+    passwordOptions.push(...numbers);
   }
 
   if (isSymbols === true) {
-    var randomIndex = Math.floor(Math.random() * symbols.length);
-    savedPassword = savedPassword + symbols[randomIndex];
+    passwordOptions.push(...symbols);
   }
 
   if (isUpperCase === false && isLowerCase === false && isNumbers === false && isSymbols === false) {
@@ -48,7 +48,9 @@ function generatePassword() {
     return "";
   }
 
-else { window.alert("You are outside the password range")
+//for-loop to execute code more than once as needed 
+for(var i=0; i<passwordSize; i++){
+savedPassword+=passwordOptions[Math.floor(Math.random()*passwordOptions.length)];
 }
 
 return savedPassword;
