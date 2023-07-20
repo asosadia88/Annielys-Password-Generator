@@ -14,7 +14,7 @@ N/A
 
 This site may now be accessed with all its updated features by visiting the hyperlink below: 
 
-<!-- INSERT DEPLOYED LINK HERE -->
+https://asosadia88.github.io/Annielys-Password-Generator/
 
 The page will generate a unique password 8-128 characters in length for every user based on selected criteria. The image below shows the result of a randomly generated password of 88 characters:
 <img src="./Assets/Images/password-screenshot.png" alt="Password Screenshot">
